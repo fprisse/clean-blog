@@ -3,7 +3,8 @@ layout: default
 title: Logboek
 ---
 
-<div class="post-cards-container">
+<div class="wrapper">
+
   {% for post in site.posts %}
     <div class="post-card">
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
@@ -15,19 +16,12 @@ title: Logboek
 </div>
 
 <style>
-  .post-cards-container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   .post-card {
     background-color: white;
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    width: 100%;
   }
 
   .post-date {
@@ -35,5 +29,11 @@ title: Logboek
     font-size: 0.9em;
     margin-top: -0.5rem;
     margin-bottom: 1rem;
+  }
+
+  .wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem;
   }
 </style>
