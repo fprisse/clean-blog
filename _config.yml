@@ -1,26 +1,20 @@
-# Site settings
+# Site Settings
 title: My Blog
 description: A minimal blog powered by the Cayman Jekyll theme.
-baseurl: "/clean-blog" # the subpath of your site (e.g. /blog)
-url: "https://fprisse.github.io" # replace with your GitHub Pages URL
-
-# Build settings
+baseurl: "/clean-blog"
+url: "https://fprisse.github.io"
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-paginate
-
-# Pagination settings
-paginate: 10                # Show 10 posts per page
-paginate_path: "/page:num/"  # Pagination path
-
-# Permalinks
+paginate: 10
+paginate_path: "/blog/page:num/"
 permalink: /:slug.html
+
+# Markdown processor
+markdown: kramdown
 
 # Exclude these from processing
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-
-# Markdown processor
-markdown: kramdown
