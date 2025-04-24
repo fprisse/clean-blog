@@ -22,6 +22,7 @@ title: Logboek
     margin-bottom: 2rem;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #333; /* Set the text color for the post cards */
   }
 
   .post-date {
@@ -32,7 +33,7 @@ title: Logboek
   }
 
   .wrapper {
-    max-width: 740px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
   }
