@@ -1,41 +1,76 @@
-<!-- blog.html -->
----
-layout: default
-title: Blog
----
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<div class="wrapper">
-  <h1>Blog</h1>
+  <!-- Use site.baseurl to ensure correct CSS loading -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v={{ site.github.build_revision }}">
 
-  {% for post in site.posts %}
-    <div class="post-card">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      <a href="{{ post.url }}">Read more →</a>
-    </div>
-  {% endfor %}
-</div>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-<style>
-  .post-card {
-    background-color: white;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
+    header.page-header {
+      background: linear-gradient(120deg, #155799, #159957);
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+    }
 
-  .post-date {
-    color: #777;
-    font-size: 0.9em;
-    margin-top: -0.5rem;
-    margin-bottom: 1rem;
-  }
+    .wrapper {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-  .wrapper {
-    max-width: 740px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-</style>
+    .post-card {
+      background-color: white;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+    {% if page.description %}
+      <h2 class="project-tagline">{{ page.description }}</h2>
+    {% endif %}
+  </header>
+
+  <main class="wrapper">
+    <article class="post-card">
+      {{ content }}
+    </article>
+  </main>
+
+  <footer>
+    Kept simple with ❤️ and Markdown
+  </footer>
+</body>
+</html>
