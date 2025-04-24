@@ -1,6 +1,20 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.date | date: "%B %d, %Y" }}</h2>
+    </header>
 
 <div class="wrapper">
   <article class="post-card">
@@ -13,6 +27,9 @@ layout: default
     <a href="{{ site.baseurl }}">&larr; Back to Blog</a>
   </div>
 </div>
+
+
+
 
 <style>
   .post-card {
@@ -45,3 +62,11 @@ layout: default
     color: #0366d6;
   }
 </style>
+
+      <footer class="site-footer">
+      Kept simple with ❤️ and Markdown
+      </footer>
+    </main>
+  </body>
+</html>
+
