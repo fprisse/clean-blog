@@ -2,7 +2,7 @@
 title: My Blog
 description: A minimal blog powered by the Cayman Jekyll theme.
 baseurl: "" # the subpath of your site (e.g. /blog)
-url: "https://yourusername.github.io" # replace with your GitHub Pages URL
+url: "https://fprisse.github.io/clean-blog/" # replace with your GitHub Pages URL
 
 # Build settings
 theme: jekyll-theme-cayman
@@ -11,7 +11,7 @@ plugins:
 
 # Pagination settings
 paginate: 10                # Show 10 posts per page
-paginate_path: "/blog/page:num/"  # Pagination path
+paginate_path: "/page:num/"  # Pagination path
 
 # Permalinks
 permalink: /:slug.html
