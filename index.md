@@ -8,7 +8,7 @@ title: Blog
 
   {% for post in site.posts %}
     <div class="post-card">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
       <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
       <a href="{{ post.url }}">Read more →</a>
