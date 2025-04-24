@@ -25,10 +25,6 @@ title: Logboek
     color: #333; /* Set the text color for the post cards */
   }
 
-  .post-card h2 {
-    color: #159957; /* Change h2 text color inside post-card */
-  }
-
   .post-date {
     color: #777;
     font-size: 0.9em;
@@ -37,7 +33,7 @@ title: Logboek
   }
 
   .wrapper {
-    max-width: 1000px;
+    max-width: 740px;
     margin: 0 auto;
     padding: 2rem;
   }
