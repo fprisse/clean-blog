@@ -4,6 +4,7 @@ title: Blog
 paginate: true
 ---
 
+
 <div class="wrapper">
   <h1>Blog</h1>
 
