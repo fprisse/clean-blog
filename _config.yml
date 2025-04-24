@@ -1,6 +1,6 @@
 # Site Settings
-title: My Blog
-description: A minimal blog powered by the Cayman Jekyll theme.
+title: Logboek
+description: "voor wie 't lezen wil"
 baseurl: "/clean-blog"
 url: "https://fprisse.github.io"
 theme: jekyll-theme-cayman
