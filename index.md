@@ -4,7 +4,6 @@ title: Logboek
 ---
 
 <div class="wrapper">
-  <h1>Blog</h1>
 
   {% for post in site.posts %}
     <div class="post-card">
