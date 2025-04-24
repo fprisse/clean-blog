@@ -3,8 +3,8 @@ title: "Logboek"
 description: "voor wie 't lezen wil"
 baseurl: "/clean-blog"
 url: "https://fprisse.github.io"
-# theme: jekyll-theme-cayman
-theme: null
+theme: jekyll-theme-cayman
+# theme: null
 plugins:
   - jekyll-paginate
 paginate: 10
