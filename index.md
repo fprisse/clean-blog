@@ -1,19 +1,29 @@
 ---
 layout: default
 title: Blog
+paginate: true
 ---
 
 <div class="wrapper">
   <h1>Blog</h1>
 
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <div class="post-card">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
       <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      <a href="{{ post.url }}">Read more →</a>
+      <a href="{{ post.url | relative_url }}">Read more →</a>
     </div>
   {% endfor %}
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">← Newer Posts</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Older Posts →</a>
+    {% endif %}
+  </div>
 </div>
 
 <style>
@@ -36,5 +46,9 @@ title: Blog
     max-width: 740px;
     margin: 0 auto;
     padding: 2rem;
+  }
+
+  .pagination a {
+    margin-right: 1rem;
   }
 </style>
