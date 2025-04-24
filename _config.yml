@@ -1,0 +1,26 @@
+# Site settings
+title: My Blog
+description: A minimal blog powered by the Cayman Jekyll theme.
+baseurl: "" # the subpath of your site (e.g. /blog)
+url: "https://yourusername.github.io" # replace with your GitHub Pages URL
+
+# Build settings
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 10                # Show 10 posts per page
+paginate_path: "/blog/page:num/"  # Pagination path
+
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Exclude these from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Markdown processor
+markdown: kramdown
